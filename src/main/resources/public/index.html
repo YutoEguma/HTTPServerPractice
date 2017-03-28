@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8"/>
+    <title>About Cabos</title>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/developer.css"/>
+</head>
+<body>
+<header class="header">
+    <p class="site-title-sub">Simple Webb Server developer's information</p>
+    <h1 class="site-title">HI, My name is Cabos</h1>
+    <div class="buttons">
+        <a class="button" href="#about">ABOUT ME</a>
+        <a class="button button-showy" href="#disc">COUNTERMEASURE</a>
+    </div>
+</header>
+<section class="about" id="about">
+    <h2 class="heading">ABOUT ME</h2>
+    <p class="about-text">
+        はじめまして。本名は「江熊夕人」といいます。<br/>
+        あだなは、「かぼす/Cabos」です。ほりけんさんにあだ名をいただきました。
+    </p>
+    <p class="about-text">
+        かぼすは、大分県の名産品の薬味のことです。<br/>
+        ときにゆるキャラになったり、ジュースになったり、𩸽のとなりに添えられたりします。
+    </p>
+    <p class="about-text">
+        江熊夕人は、大分県の出身ではなく、となりの福岡県出身です。<br/>
+        ただし、父親は大分県出身だったりします。
+    </p>
+</section>
+<section class="festival">
+    <h2 class="heading">SCHOOL DAYS</h2>
+    <p class="festival-text">
+        学生時代のことを全て履歴として書くのはめんどくさいですし、<br/>
+        誰も読まないでしょうから、書きません。<br/>
+    </p>
+    <p class="festival-text">
+        ただ、一つだけ、学生時代に熱中していたことを書きたいと思います。<br/>
+        それは、<strong>学祭</strong>です。ずっと運営に携わってきました。<br/>
+        <a href="http://www.kyudaisai.jp/68th/">こんなサイト</a>を作るなどしました。
+    </p>
+    <p class="festival-text">
+        たくさんの人々が、好きなことに没頭して何かを作り上げる瞬間は、<br/>
+        言葉にできないくらい素晴らしいものです。<br/>
+        僕自身、学祭を通してそれを見てきましたし、経験してきました。<br/>
+        この豊かな瞬間をたくさんつくりあげられる人間になりたくて、今ここにいます。
+    </p>
+    <p class="festival-text">
+
+    </p>
+</section>
+<section class="disc" id="disc">
+    <h2 class="heading">DiSC</h2>
+    <p class="disc-text">
+        僕への対策に使っていただければと思います。<br/>
+        それぞれの要素についての説明は省略。
+    </p>
+    <div class="cabos-disc">
+        <canvas id="myChart" width="400" height="200"></canvas>
+    </div>
+</section>
+<section class="fashion horizontal-stripe">
+    <h2 class="heading">しましま</h2>
+    <p class="fashion-text">
+        僕の格好は毎日こんなかんじです。
+    </p>
+</section>
+<footer class="footer">
+    &copy; Cabos
+</footer>
+<script src="js/Chart.js"></script>
+<script>
+    var data = {
+        labels: ["D", "i", "S", "C"],
+        datasets: [
+            {
+                fillColor: "#000",
+                strokeColor: "#000",
+                data: [4, 3.5, 5, 7],
+                backgroundColor: [
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                ],
+            }
+        ]
+    };
+    var ctx = document.getElementById("myChart").getContext("2d");
+    new Chart(ctx, {
+        type: 'bar',
+        data: data,
+        options: {
+            legend: {
+                display: false,
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        max: 8,
+                        min: 0,
+                        stepSize: 2
+                    }
+                }]
+            }
+        }
+    });
+</script>
+</body>
+</html>

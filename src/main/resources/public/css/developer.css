@@ -1,0 +1,190 @@
+@charset "UTF-8";
+/***************
+ * common
+ **************/
+html {
+    font-size: 62.5%;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    background: #151515 url('../images/login-background.jpg') no-repeat fixed left bottom;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: Raleway, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+/***************
+ * header
+ **************/
+.header {
+    padding: 170px 30px 80px;
+}
+.site-title-sub {
+    margin: 0 0 30px;
+}
+.site-title-sub::before,
+.site-title-sub::after {
+    content: '';
+    display: inline-block;
+    width: 140px;
+    height: 2px;
+    margin: 0 30px;
+    background-color: #fff;
+    vertical-align: middle;
+}
+.site-title {
+    margin: 50px 0 40px;
+    font-size: 7.6rem;
+}
+.site-description {
+    margin-bottom: 50px;
+    color: #888;
+    font-size: 1.6rem;
+}
+.button {
+    display: inline-block;
+    width: 200px;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: #32cd32;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+}
+.button:hover {
+    opacity: 0.9;
+}
+.button-showy {
+    background-color: #f1b400;
+}
+.buttons .button {
+    margin: 10px;
+}
+.heading {
+    position: relative;
+    display: inline-block;
+    margin: 30px 0 15px;
+    padding-bottom: 15px;
+    letter-spacing: 2px;
+    font-size: 4rem;
+}
+.heading::before,
+.heading::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #999;
+}
+.heading::before {
+    bottom: 5px;
+}
+/***************
+ * about section
+ **************/
+.about {
+    padding: 80px 30px;
+    background-color: #fff;
+    color: #333;
+}
+.about-text {
+    margin: 30px 0;
+    line-height: 2.5;
+}
+.footer {
+    padding: 12px 0;
+    font-size: 1.3rem;
+}
+/***************
+ * festival
+ **************/
+.festival {
+    padding: 80px 30px;
+    background: #151515 url('../images/festival.png') no-repeat bottom center;
+    background-size: cover;
+    color: #fff;
+}
+.festival-text {
+    margin: 30px 0;
+    line-height: 2.5;
+}
+.festival a {
+    color: #fff;
+}
+/***************
+ * Disc
+ **************/
+.disc {
+    padding: 80px 30px;
+    background-color: #fff;
+    color: #333;
+}
+.cabos-disc {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+/***************
+ * Fashion
+ **************/
+.fashion {
+    padding: 80px 30px 300px 30px;
+    background-size: 50px 50px;
+    color: #fff;
+    opacity: 0.6;
+}
+.horizontal-stripe {
+    background-color: #333;
+    background-image: linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+}
+/***************
+ * Footer
+ **************/
+.footer {
+    background-color: #fff;
+    color: #333;
+}
+/*********************
+ * smp settings
+ ********************/
+@media (max-width: 768px) {
+    /*********************
+     * header
+     *********************/
+    .site-title-sub::before,
+    .site-title-sub::after {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+        font-size: 1.7rem;
+    }
+    .site-title {
+        margin-top: 35px;
+        font-size: 5rem;
+    }
+    .header {
+        padding-top: 60px;
+    }
+    .button:hover {
+        opacity: 1;
+    }
+    .heading {
+        font-size: 2.5rem;
+    }
+    body {
+        font-size: 1.3rem;
+    }
+    .about-text {
+        line-height: 1.8;
+    }
+}
+@media (max-width: 1024px) {
+    body {
+        background-image: none;
+    }
+}
