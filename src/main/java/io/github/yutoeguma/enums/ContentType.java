@@ -1,7 +1,5 @@
 package io.github.yutoeguma.enums;
 
-import lombok.Getter;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -20,10 +18,8 @@ public enum ContentType {
     imagePing("image/ping", "png");
 
     /** ヘッダーに記述するコンテンツのタイプ */
-    @Getter
     private String contentType;
     /** 拡張子 */
-    @Getter
     private String extension;
 
     /** 拡張子によってContentTypeを選択して取得するためのMap */
@@ -46,5 +42,16 @@ public enum ContentType {
     ContentType(String contentType, String extension) {
         this.contentType = contentType;
         this.extension = extension;
+    }
+
+    // ===================================================================================
+    //                                                                            Accessor
+    //                                                                            ========
+    private String getContentType() {
+        return this.contentType;
+    }
+
+    private String getExtension() {
+        return this.extension;
     }
 }

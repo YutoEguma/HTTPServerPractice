@@ -1,7 +1,5 @@
 package io.github.yutoeguma.exeptions;
 
-import lombok.NoArgsConstructor;
-
 /**
  *
  * リクエストの形式が正しくない際に返す例外です
@@ -9,10 +7,13 @@ import lombok.NoArgsConstructor;
  *
  * @author yuto.eguma
  */
-@NoArgsConstructor
 public class IncorrectRequestException extends RuntimeException {
 
     public IncorrectRequestException(String msg) {
         super(msg);
+    }
+
+    public IncorrectRequestException() {
+        super();
     }
 }
