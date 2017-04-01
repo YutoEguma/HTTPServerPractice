@@ -53,16 +53,16 @@ public class HttpResponse {
     public String toString() {
         StringBuilder sb = new StringBuilder();
 
-        // request-line
+        // response-line
         sb.append(this.httpVersion).append(SP).append(this.httpStatus.getStatusCode()).append(SP).append(this.httpStatus).append(CRLF);
 
-        // header-line
+        // response-header
         this.responseHeaderAttr.entrySet()
                 .forEach(headerLine -> sb.append(headerLine.getKey()).append(":").append(SP).append(headerLine.getValue()).append(CRLF));
 
         sb.append(CRLF);
 
-        // request-body
+        // response-body
         sb.append(this.body);
 
         return sb.toString();
