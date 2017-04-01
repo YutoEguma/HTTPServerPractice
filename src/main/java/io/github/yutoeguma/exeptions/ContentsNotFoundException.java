@@ -4,7 +4,7 @@ import lombok.NoArgsConstructor;
 
 /**
  * 指定されたコンテンツが存在しない場合に投げられる例外です
- * これを投げると404がページになるようにハンドリングします
+ * これを投げると 404 - not found がページになるようにハンドリングします
  *
  * @author yuto.eguma
  */

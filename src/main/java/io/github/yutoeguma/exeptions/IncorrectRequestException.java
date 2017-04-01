@@ -5,14 +5,14 @@ import lombok.NoArgsConstructor;
 /**
  *
  * リクエストの形式が正しくない際に返す例外です
- * これが投げられると、400を返します
+ * これを投げると 400 - Bad Request がページになるようにハンドリングします
  *
  * @author yuto.eguma
  */
 @NoArgsConstructor
-public class BadRequestException extends RuntimeException {
+public class IncorrectRequestException extends RuntimeException {
 
-    public BadRequestException(String msg) {
+    public IncorrectRequestException(String msg) {
         super(msg);
     }
 }
