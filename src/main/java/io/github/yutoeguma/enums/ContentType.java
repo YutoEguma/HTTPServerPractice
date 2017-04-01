@@ -47,11 +47,11 @@ public enum ContentType {
     // ===================================================================================
     //                                                                            Accessor
     //                                                                            ========
-    public String getContentType() {
+    private String getContentType() {
         return this.contentType;
     }
 
-    public String getExtension() {
+    private String getExtension() {
         return this.extension;
     }
 }
