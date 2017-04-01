@@ -3,10 +3,6 @@ package io.github.yutoeguma.section3;
 import io.github.yutoeguma.enums.ContentType;
 import io.github.yutoeguma.enums.HttpStatus;
 
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -51,18 +47,6 @@ public class HttpResponse {
         this.body = "<!DOCTYPE html><html><head></head><body><p>Sample Response</p></body></html>";
         this.responseHeaderAttr.put(CONTENT_TYPE, ContentType.textHtml.getContentType());
         this.responseHeaderAttr.put(CONTENT_LENGTH, String.valueOf(this.body.length()));
-    }
-
-    // ===================================================================================
-    //                                                                     response writer
-    //                                                                     ===============
-    /**
-     * レスポンスを返す
-     */
-    public void writeResponse(OutputStream os) throws IOException {
-        BufferedWriter br = new BufferedWriter(new OutputStreamWriter(os));
-        br.write(this.toString());
-        br.close();
     }
 
     @Override

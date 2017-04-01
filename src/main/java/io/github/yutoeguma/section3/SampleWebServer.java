@@ -36,7 +36,7 @@ public class SampleWebServer {
                         OutputStream os = socket.getOutputStream()
                 ) {
 
-                    // HTTPインスタンスを準備
+                    // HTTPリクエストインスタンスを準備
                     logger.info(">>>>>>>>>>>>>>>>>>>> request");
                     HttpRequest request = new HttpRequest(is);
                     logger.info(request.toString());
@@ -45,7 +45,7 @@ public class SampleWebServer {
                     logger.info(">>>>>>>>>>>>>>>>>>>> response");
                     HttpResponse response = new HttpResponse(HttpStatus.OK);
                     logger.info(response.toString());
-                    response.writeResponse(os);
+                    os.write(response.toString().getBytes());
                 }
             }
         }
