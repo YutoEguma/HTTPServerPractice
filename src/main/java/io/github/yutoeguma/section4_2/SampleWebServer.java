@@ -41,6 +41,7 @@ public class SampleWebServer {
                     try {
                         logger.info(">>>>>>>>>>>>>>>>>>>> request");
                         HttpRequest request = new HttpRequest(is);
+                        logger.info(request.toString());
 
                         logger.info(">>>>>>>>>>>>>>>>>>>> response");
                         Contents contents = contentsLoader.getContents(request.getRequestTarget());
