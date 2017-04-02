@@ -15,7 +15,8 @@ public enum ContentType {
     textJavascript("text/javascript; charset=UTF-8", "js"),
     textHtml("text/html; charset=UTF-8", "html"),
     imageJpeg("image/jpeg", "jpg"),
-    imagePing("image/ping", "png");
+    imagePing("image/ping", "png"),
+    applicationPdf("application/pdf", "pdf");
 
     /** ヘッダーに記述するコンテンツのタイプ */
     private String contentType;
