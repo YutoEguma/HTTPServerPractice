@@ -2,6 +2,8 @@
 
 0. 必要なものを準備しておく
 * PC
+* Goole Chrome
+  * https://www.google.co.jp/chrome/browser/desktop/
 * Java8の実行環境(jdk)
   * http://www.oracle.com/technetwork/java/javase/downloads/index.html
 * IntelliJ （無料版でもOK）
