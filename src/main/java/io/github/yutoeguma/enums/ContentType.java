@@ -44,9 +44,6 @@ public enum ContentType {
         this.extension = extension;
     }
 
-    // ===================================================================================
-    //                                                                            Accessor
-    //                                                                            ========
     public String getContentType() {
         return this.contentType;
     }

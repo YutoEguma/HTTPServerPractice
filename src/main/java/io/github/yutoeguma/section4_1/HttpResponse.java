@@ -21,8 +21,8 @@ public class HttpResponse {
     private static final String CRLF = CR + LF;
     private static final String SP = " ";
 
-    private static final String CONTENT_TYPE = "Content-Type: ";
-    private static final String CONTENT_LENGTH = "Content-Length: ";
+    private static final String CONTENT_TYPE = "Content-Type";
+    private static final String CONTENT_LENGTH = "Content-Length";
 
     // ===================================================================================
     //                                                                           Attribute
