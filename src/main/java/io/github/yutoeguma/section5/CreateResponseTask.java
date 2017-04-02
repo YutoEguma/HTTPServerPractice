@@ -47,7 +47,6 @@ public class CreateResponseTask implements Runnable {
                 logger.info(">>>>>>>>>>>>>>>>>>>> response");
                 Contents contents = contentsLoader.getContents(request.getRequestTarget());
                 response = new HttpResponse(HttpStatus.OK, contents);
-                logger.info(response.toString());
 
             } catch (IncorrectRequestException e) {
                 logger.info("正しくないリクエストを受け付けました", e);
@@ -59,10 +58,15 @@ public class CreateResponseTask implements Runnable {
                 logger.error("IOExceptionが発生しました", e);
                 response = new HttpResponse(HttpStatus.INTERNAL_SERVER_ERROR);
             }
+            logger.info(response.toString());
             os.write(response.getResponse());
         } catch (Exception e) {
             // その他どこで例外が発生してもログに落としておく
             logger.error("Error", e);
+        } finally {
+            try {
+                socket.close();
+            } catch (IOException ignore) {}
         }
     }
 }
