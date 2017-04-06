@@ -10,8 +10,8 @@
   * https://www.jetbrains.com/idea/download/download-thanks.html?code=IIC
   * Eclipese でも可能ですが今回の勉強会ではオススメはしません
 * mavenの実行環境
-  * windows の場合 : http://qiita.com/ko2a/items/15343ea8fae4233e9438
-  * mac の場合 : http://qiita.com/saitoryc/items/737ee9e711f1ebe0dcfa
+  * windows の場合 : http://qiita.com/ko2a/items/15343ea8fae4233e9438
+  * mac の場合 : $ brew install maven 
 
 1. HTTPServerPracticeをクローンする
 ```
