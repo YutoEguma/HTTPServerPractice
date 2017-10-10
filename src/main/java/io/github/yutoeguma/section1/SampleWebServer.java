@@ -41,7 +41,6 @@ public class SampleWebServer {
                         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()))
                 ) {
                     // リクエストを読み込んでログに出す
-                    logger.info(">>>>>>>>>>>>>>>>>>>> request");
                     StringBuilder sb = new StringBuilder();
                     sb.append("\n");
                     String line = br.readLine();
@@ -49,6 +48,7 @@ public class SampleWebServer {
                         sb.append(line).append("\n");
                         line = br.readLine();
                     }
+                    logger.info(">>>>>>>>>>>>>>>>>>>> request");
                     logger.info(sb.toString());
 
                     // レスポンスを返す
@@ -56,6 +56,8 @@ public class SampleWebServer {
                     String respStr = "初めてのレスポンスを返すよ";
                     logger.info(respStr);
                     bw.write(respStr);
+
+                    logger.info("\n");
                 }
             }
         }

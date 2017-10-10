@@ -73,19 +73,19 @@ public class HttpResponse {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder().append(CRLF);
 
         // response-line
-        sb.append(this.httpVersion).append(SP).append(this.httpStatus.getStatusCode()).append(SP).append(this.httpStatus).append(CRLF);
+        sb.append(this.httpVersion)
+                .append(SP).append(this.httpStatus.getStatusCode()).append(SP).append(this.httpStatus).append(CRLF);
 
         // response-header
-        this.responseHeaderAttr.entrySet()
-                .forEach(headerLine -> sb.append(headerLine.getKey()).append(":").append(SP).append(headerLine.getValue()).append(CRLF));
+        this.responseHeaderAttr.forEach((key, value) -> sb.append(key).append(":").append(SP).append(value).append(CRLF));
 
         sb.append(CRLF);
 
         // response-body
-        // sb.append(this.body);
+        sb.append(new String(this.body));
 
         return sb.toString();
     }

@@ -31,6 +31,7 @@ public class SampleWebServer {
     public static void main(String[] args) throws IOException {
         try (ServerSocket server = new ServerSocket(portNum)) {
             while (true) {
+                logger.info("\n");
                 try (
                         Socket socket = server.accept();
                         InputStream is = socket.getInputStream();
@@ -62,7 +63,7 @@ public class SampleWebServer {
 
                 } catch (Exception e) {
                     // その他どこで例外が発生しても落とさないようにする
-                    logger.error("Error", e);
+                    // logger.error("Error", e);
                 }
             }
         }

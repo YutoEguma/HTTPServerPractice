@@ -106,13 +106,14 @@ public class HttpResponse {
         sb.append(this.httpVersion).append(SP).append(this.httpStatus.getStatusCode()).append(SP).append(this.httpStatus).append(CRLF);
 
         // response-header
-        this.responseHeaderAttr.entrySet()
-                .forEach(headerLine -> sb.append(headerLine.getKey()).append(":").append(SP).append(headerLine.getValue()).append(CRLF));
+        this.responseHeaderAttr.forEach((key, value) -> sb.append(key).append(":").append(SP).append(value).append(CRLF));
 
         sb.append(CRLF);
 
-        // response-body
-        // sb.append(this.body);
+        // response-body コメントアウト外すの注意！！
+        //for (byte b :this.body) {
+        //    sb.append(b);
+        //}
 
         return sb.toString();
     }
